@@ -30,11 +30,11 @@ def new():
 def save():
 	form = ExampleForm()
 	if form.validate_on_submit():
-		print "salvando os dados:"
+		print "saving of data:"
 		print form.title.data
 		print form.content.data
 		print form.date.data
-		flash('Dados salvos!')
+		flash('Data saved!')
 	return render_template('new.html', form=form)
 
 @app.route('/view/<id>/')
